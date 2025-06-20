@@ -1,2 +1,4 @@
 # Few-Shot-Classification-NIR
-农业近红外光谱数据的Few-shot分类模型
+Few-shot classification model for agricultural NIR spectral data
+
+The code will be open sourced after the article is accepted！！！
