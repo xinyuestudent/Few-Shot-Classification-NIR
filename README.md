@@ -29,11 +29,11 @@ A prevalent approach to addressing such variability involves collecting large an
 | Tree Nir Dataset      | 1271           | 4              | Organ series  |
 | Cigar Nir Dataset     | 384            | 6              | Origin        |
 
-![image-20250709162307725](C:/Users/wangx/AppData/Roaming/Typora/typora-user-images/image-20250709162307725.png)
+![image-20250709162307725](image-20250709162307725.png)
 
 ### The Architecture of Proposed Method
 
-![image-20250709162420026](C:/Users/wangx/AppData/Roaming/Typora/typora-user-images/image-20250709162420026.png)
+![image-20250709162420026](image-20250709162420026.png)
 
 ### Implement
 
