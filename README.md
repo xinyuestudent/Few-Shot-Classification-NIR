@@ -8,7 +8,7 @@
 | **Yang Huang**     |   **China Tobacco Sichuan Industrial Co., Ltd.**   |
 | **Xiangdong Chen** |         **Southwest Jiaotong University**          |
 | **Ronggao Gong**   |         **Sichuan Agriculture University**         |
-| **Tao Wang**       | **Mianyang Hospital of Chengdu University of TCM** |
+| **Cheng Yang**     |         **Southwest Jiaotong University**          |
 | **Xiaomei Long**   |         **Southwest Jiaotong University**          |
 | **Tailin She**     |   **China Tobacco Sichuan Industrial Co., Ltd.**   |
 | **Yasen li**       |   **China Tobacco Sichuan Industrial Co., Ltd.**   |
