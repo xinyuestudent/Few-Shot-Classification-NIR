@@ -1,17 +1,6 @@
-## Engineering an Attention-Guided Adaptive Metric Network for Few-Shot Classification in Agricultural Spectroscopy
+## APMN: Adaptive Prototype Metric Learning for Data-Efficient Near-Infrared Spectral Sensing in Automated Quality Inspection Systems
 
 ### The implementation code will be released under an open-source license contingent upon formal acceptance of the accompanying manuscript for publication.
-
-| Author Name        |                    Affiliation                     |
-| :----------------- | :------------------------------------------------: |
-| **Xinyue Wang**    |         **Southwest Jiaotong University**          |
-| **Yang Huang**     |   **China Tobacco Sichuan Industrial Co., Ltd.**   |
-| **Xiangdong Chen** |         **Southwest Jiaotong University**          |
-| **Ronggao Gong**   |         **Sichuan Agriculture University**         |
-| **Cheng Yang**     |         **Southwest Jiaotong University**          |
-| **Xiaomei Long**   |         **Southwest Jiaotong University**          |
-| **Tailin She**     |   **China Tobacco Sichuan Industrial Co., Ltd.**   |
-| **Yasen li**       |   **China Tobacco Sichuan Industrial Co., Ltd.**   |
 
 ### Motivation
 
