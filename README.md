@@ -20,7 +20,7 @@ typically employ fixed distance measures such as Euclidean or cosine similarity.
 
 ### The Architecture of Proposed Method
 
-![image-20250709162420026](image-20250709162420026.png)
+![model](model.png)
 
 
 ### Implement
