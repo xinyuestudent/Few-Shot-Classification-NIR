@@ -1,4 +1,6 @@
-<img width="1099" height="566" alt="image" src="https://github.com/user-attachments/assets/ed2bd48b-cdba-43fb-8a1e-c151da2fed5d" />## Few-Shot Near-Infrared Spectral Classification Using Dual Attention and Adaptive Prototype Matching
+<img width="1099" height="566" alt="image" src="https://github.com/user-attachments/assets/ed2bd48b-cdba-43fb-8a1e-c151da2fed5d" />
+
+## Few-Shot Near-Infrared Spectral Classification Using Dual Attention and Adaptive Prototype Matching
 
 ### The implementation code will be released under an open-source license contingent upon formal acceptance of the accompanying manuscript for publication.
 
