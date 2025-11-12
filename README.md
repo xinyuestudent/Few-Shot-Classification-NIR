@@ -1,19 +1,17 @@
-## APMN: Adaptive Prototype Metric Learning for Data-Efficient Near-Infrared Spectral Sensing in Automated Quality Inspection Systems
+<img width="1099" height="566" alt="image" src="https://github.com/user-attachments/assets/ed2bd48b-cdba-43fb-8a1e-c151da2fed5d" />## Few-Shot Near-Infrared Spectral Classification Using Dual Attention and Adaptive Prototype Matching
 
 ### The implementation code will be released under an open-source license contingent upon formal acceptance of the accompanying manuscript for publication.
 
 ### Motivation
 
-Near-infrared (NIR) spectroscopy is a widely employed technique for rapid and non-destructive analysis of the chemical and physical properties of materials. However, NIR data frequently exhibit substantial variability owing to instrumental noise, environmental conditions, and inherent differences among the samples under analysis. Furthermore, distinct application domains (e.g., pharmaceuticals, food quality control, and agriculture) may exhibit unique data distributions, complicating the development of models that generalize effectively across diverse scenarios, and necessitating a flexible and adaptable learning framework.
-	
-A prevalent approach to addressing such variability involves collecting large annotated datasets for each domain; however, this practice is often impractical due to the considerable cost and time required for data acquisition and labelling. Furthermore, minor differences in spectra within the same class can result in challenges in distinguishing between classes, particularly when the available training data is constrained. These factors underscore the necessity for a robust and adaptable few-shot learning framework capable of effectively addressing minor differences in NIR data and adapting to varying data distributions across diverse domains.
+Conventional few-shot learning frameworks for spectral analysis 
+typically employ fixed distance measures such as Euclidean or cosine similarity. While effective for simple feature distributions, these metrics are inadequate for near-infrared (NIR) spectra, which exhibit nonlinear wavelength dependencies, subtle inter-class variations, and domain-specific distribution shifts. Under such conditions, static metrics fail to adapt to the class-dependent geometry of spectral manifolds, resulting in inconsistent decision boundaries and poor generalization. To overcome these limitations, we reformulate few-shot spectral classification as a relation-driven learning problem, in which the similarity between query samples and class prototypes is modeled as a learnable, continuous, and class-conditional function rather than a predefined distance. This formulation allows the model to dynamically modulate relational strength according to spectral similarity, capturing smooth transitions between classes within a unified metric space. This motivation underlies the design of the proposed DAAPNet framework, which integrates spectrum-aware dual attention with an Adaptive Similarity Matching (ASM) module to achieve data-efficient, interpretable, and relation-aware few-shot learning for NIR spectral analysis.
 
 ### Dataset
 
 | Dataset name          | No. of Samples | No. of Classes | Type of Class |
 | --------------------- | -------------- | -------------- | ------------- |
 | Mango Nir Dataset     | 10243          | 10             | Cultivar      |
-| Pines Nir Dataset     | 752            | 2              | Cultivar      |
 | Blueberry Nir Dataset | 1350           | 4              | Acidity       |
 | Tree Nir Dataset      | 1271           | 4              | Organ series  |
 | Cigar Nir Dataset     | 384            | 6              | Origin        |
@@ -24,9 +22,10 @@ A prevalent approach to addressing such variability involves collecting large an
 
 ![image-20250709162420026](image-20250709162420026.png)
 
+
 ### Implement
 
-We train the models in both n-way n-shot settings with standard normalization and augmentation techniques as in previous works \cite{}. In addition, our attention blocks are shared between adaptation steps and only a single head (H=1) is used, with the size of this layer set to 640. During training, the Adam Optimizer is trained with a learning rate of 0.003 without decay or scheduling. The 1-shot model is trained for 200 epochs, with 200 tasks sampled in each epoch, resulting in 40,000 tasks. On the other hand, the 5-shot model is trained for 200 epochs, with a total of 40,000 tasks. During the evaluation, we sample 15 queries per class in each episode and report the average accuracy with its confidence interval over 2,000 randomly sampled test episodes. In this study, in order to ensure the consistency of the analysis, the SNV + SG + 1st derivative preprocessing was used for the qualitative analysis.
+We train the models in both n-way n-shot settings with standard normalization and augmentation techniques as in previous works \cite{pmlr-v70-finn17a}. The experiment utilizes a 5-way 5-shot configuration, with the model undergoing training for 100 epochs. During the model training phase, each epoch randomly selects five samples from the training set as the support set and one sample as the query set. This process is repeated a total of 600 times to establish 600 training episodes for training. In the testing phase, each epoch, the model will randomly select five samples from the test set as the support set and one sample as the query set, totaling 300 random selections. This process establishes 300 test episodes for training. This experimental parameter configuration ensures that the model can be trained stably in a few-shot scenario and fully learn the distinguishing features between categories through meta-learning.
 
 ### Experiments and Results
 
@@ -52,4 +51,4 @@ We train the models in both n-way n-shot settings with standard normalization an
 | MsmcNet (2022)  |          0.81          |          0.92          |        0.45        |        0.62        |
 | AMCRN (2022)    |          0.84          |          0.94          |        0.48        |        0.64        |
 | EmoDSN (2023)   |          0.81          |          0.93          |        0.51        |        0.65        |
-| **APMN (Our)**  |        **0.85**        |        **0.95**        |      **0.55**      |      **0.76**      |
+| **APMN (Our)**  |        **0.85**        |        **0.95**        |      **0.72**      |      **0.83**      |
